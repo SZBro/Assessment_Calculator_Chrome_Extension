@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Assessment Age Calculator</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo"><img src="icon.png" alt="logo" /></div>
+    <div>
+      <h1>Age Calculator</h1>
+      <p>Chronological age &bull; 30-day months</p>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Test date</label>
+    <div class="date-row">
+      <input type="number" id="test-y" placeholder="YYYY" min="1900" max="2100" />
+      <span class="date-sep">/</span>
+      <input type="number" id="test-m" placeholder="MM" min="1" max="12" />
+      <span class="date-sep">/</span>
+      <input type="number" id="test-d" placeholder="DD" min="1" max="31" />
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Date of birth</label>
+    <div class="date-row">
+      <input type="number" id="birth-y" placeholder="YYYY" min="1900" max="2100" />
+      <span class="date-sep">/</span>
+      <input type="number" id="birth-m" placeholder="MM" min="1" max="12" />
+      <span class="date-sep">/</span>
+      <input type="number" id="birth-d" placeholder="DD" min="1" max="31" />
+    </div>
+  </div>
+
+  <div class="error" id="error"></div>
+
+  <button class="calc-btn" id="calc-btn">Calculate age</button>
+
+  <div class="result-card" id="result-card">
+    <div class="result-label">Chronological age</div>
+    <div class="age-boxes">
+      <div class="age-box">
+        <div class="age-num" id="res-year">—</div>
+        <div class="age-unit">Year</div>
+      </div>
+      <div class="slash">/</div>
+      <div class="age-box">
+        <div class="age-num" id="res-month">—</div>
+        <div class="age-unit">Month</div>
+      </div>
+      <div class="slash">/</div>
+      <div class="age-box">
+        <div class="age-num" id="res-day">—</div>
+        <div class="age-unit">Day</div>
+      </div>
+    </div>
+    <div class="total-months" id="total-months"></div>
+    <div class="detail" id="detail"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
